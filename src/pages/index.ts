@@ -5,9 +5,9 @@ class IndexPageComponent extends HTMLElement {
   
     private render(): void {
       this.innerHTML = `
-        <section class="text-white min-h-screen flex flex-col md:flex-row md:gap-70 items-start max-w-screen-lg mx-auto">
+        <section class="text-white min-h-screen flex flex-col md:flex-row items-start max-w-screen-xl mx-auto">
           <!-- Sidebar -->
-          <aside class="w-full md:w-[60%] md:h-screen md:sticky md:top-0 flex flex-col px-6 pt-20 pb-10">
+          <aside class="w-full md:w-[45%] md:h-screen md:sticky md:top-0 flex flex-col px-6 pt-20 pb-10">
             <div>
               <h1 class="text-5xl font-bold">Simon Nes</h1>
               <h2 class="text-xl font-semibold mt-2 text-gray-100">Aspiring Full Stack Engineer</h2>
@@ -37,7 +37,7 @@ class IndexPageComponent extends HTMLElement {
           </aside>
   
           <!-- Content rechts -->
-          <main class="w-full md:w-[75%] flex flex-col gap-24 px-6 pt-20">
+          <main class="w-full md:w-[55%] flex flex-col gap-24 px-6 pt-20">
             <!-- About -->
             <section id="about" class="space-y-5 text-gray-300 text-md leading-relaxed">
               <p>I am a motivated and eager software developer in training, holding a completed MBO qualification in Software Engineering (ROC Horizon College) and currently pursuing a Bachelor’s in ICT at the Amsterdam University of Applied Sciences (HvA). My passion is full-stack development, and I have hands-on experience with TypeScript, React Native, Docker, Ruby on Rails, PHP, Laravel, and MySQL.</p>
