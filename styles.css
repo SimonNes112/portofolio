@@ -1,0 +1,18 @@
+
+@import "tailwindcss";
+
+
+
+body {
+  background: linear-gradient(
+    180deg,
+    #0B111F 0%,
+    #11172A 75%,
+    #11172A 100%
+  );
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
