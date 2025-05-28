@@ -5,9 +5,9 @@ class IndexPageComponent extends HTMLElement {
   
     private render(): void {
       this.innerHTML = `
-        <section class="text-white min-h-screen flex flex-col md:flex-row items-start max-w-screen-lg mx-auto">
+        <section class="text-white min-h-screen flex flex-col md:flex-row md:gap-80 items-start max-w-screen-lg mx-auto">
           <!-- Sidebar -->
-          <aside class="w-full md:w-[30%] md:h-screen md:sticky md:top-0 flex flex-col justify-between px-6 pt-20">
+          <aside class="w-full md:w-[55%] md:h-screen md:sticky md:top-0 flex flex-col justify-between px-6 pt-20">
             <div>
               <h1 class="text-5xl font-bold">Simon Nes</h1>
               <h2 class="text-xl font-semibold mt-2 text-gray-100">Aspiring Full Stack Engineer</h2>
@@ -29,7 +29,7 @@ class IndexPageComponent extends HTMLElement {
               </nav>
             </div>
   
-            <div class="flex gap-6 text-gray-500 text-xl mt-10">
+            <div class="flex gap-6 text-gray-500 text-xl mt-6">
               <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
               <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
               <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -37,9 +37,9 @@ class IndexPageComponent extends HTMLElement {
           </aside>
   
           <!-- Content rechts -->
-          <main class="w-full md:w-[72%] flex flex-col gap-24 px-6 pt-20">
+          <main class="w-full md:w-[75%] flex flex-col gap-24 px-6 pt-20">
             <!-- About -->
-            <section id="about" class="space-y-5 text-gray-300 text-sm leading-relaxed">
+            <section id="about" class="space-y-5 text-gray-300 text-md leading-relaxed">
               <p>I am a motivated and eager software developer in training, holding a completed MBO qualification in Software Engineering (ROC Horizon College) and currently pursuing a Bachelor’s in ICT at the Amsterdam University of Applied Sciences (HvA). My passion is full-stack development, and I have hands-on experience with TypeScript, React Native, Docker, Ruby on Rails, PHP, Laravel, and MySQL.</p>
               <p>During my internships and part-time roles as a software engineer, I learned what it’s like to work in real development teams, participate in code reviews, and leverage modern development tools and workflows. For example, at Webics I contributed to both mobile applications and backend services.</p>
               <p>I’m always looking for ways to improve whether by learning new technologies or collaborating with colleagues on challenging projects. My goal is to grow into a reliable and skilled full-stack developer.</p>
