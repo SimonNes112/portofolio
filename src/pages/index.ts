@@ -5,9 +5,9 @@ class IndexPageComponent extends HTMLElement {
   
     private render(): void {
       this.innerHTML = `
-        <section class="text-white min-h-screen flex flex-col md:flex-row md:gap-80 items-start max-w-screen-lg mx-auto">
+        <section class="text-white min-h-screen flex flex-col md:flex-row md:gap-70 items-start max-w-screen-lg mx-auto">
           <!-- Sidebar -->
-          <aside class="w-full md:w-[55%] md:h-screen md:sticky md:top-0 flex flex-col justify-between px-6 pt-20">
+          <aside class="w-full md:w-[60%] md:h-screen md:sticky md:top-0 flex flex-col px-6 pt-20 pb-10">
             <div>
               <h1 class="text-5xl font-bold">Simon Nes</h1>
               <h2 class="text-xl font-semibold mt-2 text-gray-100">Aspiring Full Stack Engineer</h2>
@@ -29,7 +29,7 @@ class IndexPageComponent extends HTMLElement {
               </nav>
             </div>
   
-            <div class="flex gap-6 text-gray-500 text-xl mt-6">
+            <div class="flex gap-6 text-gray-500 text-xl mt-20">
               <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
               <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
               <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
