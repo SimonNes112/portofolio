@@ -16,7 +16,7 @@ class IndexPageComponent extends HTMLElement {
               <nav class="space-y-4 mt-10 text-gray-300 text-sm">
                 <div class="flex items-center gap-4">
                   <span class="w-10 h-px bg-gray-500"></span>
-                  <a href="#about" class="font-medium tracking-wide">ABOUT</a>
+                  <a href="#about" class="font-medium tracking-wide text-teal-400 hover:text-teal-300 transition-colors">ABOUT</a>
                 </div>
                 <div class="flex items-center gap-4">
                   <span class="w-10 h-px bg-gray-500"></span>
@@ -148,12 +148,37 @@ class IndexPageComponent extends HTMLElement {
         window.addEventListener('scroll', () => {
             const scrollY = window.scrollY;
             const navbar: HTMLElement | null = document.querySelector('nav');
-            if (navbar) {
-                // Change navbar background based on scroll position
-                if (scrollY > 50) {
-                    navbar.classList.add('bg-gray-800');
-                } else {
-                    navbar.classList.remove('bg-gray-800');
+            const aboutSection: HTMLElement | null = document.getElementById('about');
+            const aboutSectionTop = aboutSection ? aboutSection.offsetTop : 0;
+            const aboutSectionHeight = aboutSection ? aboutSection.offsetHeight : 0;
+            const experienceSectionTop = document.getElementById('experience')?.offsetTop || 0;
+            const projectsSectionTop = document.getElementById('projects')?.offsetTop || 0;
+            const isAboutVisible = scrollY === 0 || (scrollY >= aboutSectionTop && scrollY < experienceSectionTop);
+            const isExperienceVisible = scrollY >= experienceSectionTop && scrollY < projectsSectionTop;
+            const isProjectsVisible = scrollY >= projectsSectionTop;
+    
+            const links = document.querySelectorAll('nav a');
+            links.forEach(link => {
+                link.classList.remove('text-teal-400', 'font-semibold');
+                link.classList.add('text-gray-300', 'font-normal');
+            });
+            if (isAboutVisible) {
+                // const aboutLink = document.querySelector('nav a[href="#about"]');
+                // if (aboutLink) {
+                //     aboutLink.classList.add('text-teal-400', 'font-semibold');
+                //     aboutLink.classList.remove('text-gray-300', 'font-normal');
+                // }
+            } else if (isExperienceVisible) {
+                const experienceLink = document.querySelector('nav a[href="#experience"]');
+                if (experienceLink) {
+                    experienceLink.classList.add('text-teal-400', 'font-semibold');
+                    experienceLink.classList.remove('text-gray-300', 'font-normal');
+                }
+            } else if (isProjectsVisible) {
+                const projectsLink = document.querySelector('nav a[href="#projects"]');
+                if (projectsLink) {
+                    projectsLink.classList.add('text-teal-400', 'font-semibold');
+                    projectsLink.classList.remove('text-gray-300', 'font-normal');
                 }
             }
         });
