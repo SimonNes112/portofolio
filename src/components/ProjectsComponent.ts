@@ -11,7 +11,7 @@ class ProjectsComponent extends HTMLElement {
                     <a href="#" class="block p-6 hover:bg-[#202334] rounded-xl transition">
                     <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
                         <!-- Image -->
-                        <img src="../images/StalDeLageNes.png" alt="Portfolio Preview" class="w-full sm:w-56 rounded-lg object-cover">
+                        <img src="./images/StalDeLageNes.png" alt="Portfolio Preview" class="w-full sm:w-56 rounded-lg object-cover">
 
                         <!-- Content -->
                         <div class="flex-1">
@@ -32,7 +32,7 @@ class ProjectsComponent extends HTMLElement {
                     <a href="https://github.com/SimonNes112/spraak-computer-app" class="block p-6 hover:bg-[#202334] rounded-xl transition">
                     <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
                         <!-- Image -->
-                        <img src="../images/SpreekVriend.PNG" alt="Portfolio Preview" class="w-full sm:w-56 rounded-lg object-cover">
+                        <img src="./images/SpreekVriend.PNG" alt="Portfolio Preview" class="w-full sm:w-56 rounded-lg object-cover">
 
                         <!-- Content -->
                         <div class="flex-1">
