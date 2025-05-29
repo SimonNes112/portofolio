@@ -51,7 +51,7 @@ class IndexPageComponent extends HTMLElement {
           const background: HTMLElement | null = document.getElementById('app');
   
           if (background) {
-              background.style.backgroundImage = `radial-gradient(circle at ${cursor}, rgba(255, 255, 255, 0.2) 1%, transparent 40%)`;
+              background.style.backgroundImage = `radial-gradient(circle at ${cursor}, rgba(173, 216, 230, 0.2) 1%, transparent 40%)`;
           }
       });
     }

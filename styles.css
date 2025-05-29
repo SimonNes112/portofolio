@@ -7,9 +7,9 @@
 body {
   background: linear-gradient(
     180deg,
-    #0B111F 0%,
-    #11172A 75%,
-    #11172A 100%
+    #0C162E 0%, /* Donkerder blauw */
+    #182236 75%, /* Donkerder blauw */
+    #182236 100% /* Donkerder blauw */
   );
   color: #FFFFFF;
   font-family: 'Inter', sans-serif;
