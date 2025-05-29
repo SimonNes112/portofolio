@@ -16,7 +16,6 @@ class IndexPageComponent extends HTMLElement {
               <div class="flex gap-6 text-gray-500 text-xl mt-20 p-6">
                 <a href="https://github.com/SimonNes112" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/simonnes/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/simon.0229/profilecard/?igsh=MWdqZzBhanR4ZHR4NQ==" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 <a href="mailto:sgjnes@icloud.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
               </div>
             </aside>
