@@ -8,12 +8,12 @@ class IndexPageComponent extends HTMLElement {
           <section class="text-white min-h-screen flex flex-col md:flex-row items-start max-w-screen-xl mx-auto" id="background">
             <!-- Sidebar -->
             <aside class="w-full md:w-[45%] md:h-screen md:sticky md:top-0 flex flex-col px-6 pt-20 pb-10">
-              <div>
+              <div class="p-6">
                 <title-component></title-component>
                 <navbar-component></navbar-component>
               </div>
     
-              <div class="flex gap-6 text-gray-500 text-xl mt-20">
+              <div class="flex gap-6 text-gray-500 text-xl mt-20 p-6">
                 <a href="https://github.com/SimonNes112" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/simonnes/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 <a href="https://www.instagram.com/simon.0229/profilecard/?igsh=MWdqZzBhanR4ZHR4NQ==" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
