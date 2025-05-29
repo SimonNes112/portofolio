@@ -5,7 +5,7 @@ class IndexPageComponent extends HTMLElement {
   
     private render(): void {
       this.innerHTML = `
-        <section class="text-white min-h-screen flex flex-col md:flex-row items-start max-w-screen-xl mx-auto">
+        <section class="text-white min-h-screen flex flex-col md:flex-row items-start max-w-screen-xl mx-auto" id="background">
           <!-- Sidebar -->
           <aside class="w-full md:w-[45%] md:h-screen md:sticky md:top-0 flex flex-col px-6 pt-20 pb-10">
             <div>
@@ -96,20 +96,26 @@ class IndexPageComponent extends HTMLElement {
           </main>
         </section>
       `;
+      this.backGroundAnimation();
       console.log('IndexPageComponent initialized');
     }
 
-    private animatesidebar(): void {
-        const sidebar = this.querySelector('aside');
-        if (sidebar) {
-            sidebar.classList.add('animate-slide-in');
-        }
-        }
-    constructor() {
-        super();
-        this.animatesidebar();
-        }
+    private backGroundAnimation(): void {
+        // get user cursor position
+        document.addEventListener('mousemove', (event) => {
+            const x = event.clientX;
+            const y = event.clientY;
+            const cursor = `${x}px ${y}px`;
+            const background: HTMLElement | null = document.getElementById('app');
 
+            
+            // make animation effect that sits on top of the background
+            if (background) {
+                background.style.backgroundImage = `radial-gradient(circle at ${cursor}, rgba(255, 255, 255, 0.2) 10%, transparent 50%)`;
+            }
+
+        });
+    }
 }
   
   customElements.define('index-page', IndexPageComponent);
