@@ -16,7 +16,7 @@ class IndexPageComponent extends HTMLElement {
               <nav class="space-y-4 mt-10 text-gray-300 text-sm">
                 <div class="flex items-center gap-4">
                   <span class="w-10 h-px bg-gray-500"></span>
-                  <a href="#about" class="font-medium tracking-wide text-teal-400 hover:text-teal-300 transition-colors">ABOUT</a>
+                  <a href="#about" class="font-medium tracking-wide">ABOUT</a>
                 </div>
                 <div class="flex items-center gap-4">
                   <span class="w-10 h-px bg-gray-500"></span>
@@ -147,12 +147,13 @@ class IndexPageComponent extends HTMLElement {
         // Track scroll position and update navbar styles
         window.addEventListener('scroll', () => {
             const scrollY = window.scrollY;
-            const navbar: HTMLElement | null = document.querySelector('nav');
             const aboutSection: HTMLElement | null = document.getElementById('about');
             const aboutSectionTop = aboutSection ? aboutSection.offsetTop : 0;
             const aboutSectionHeight = aboutSection ? aboutSection.offsetHeight : 0;
             const experienceSectionTop = document.getElementById('experience')?.offsetTop || 0;
             const projectsSectionTop = document.getElementById('projects')?.offsetTop || 0;
+    
+            // Adjust visibility logic
             const isAboutVisible = scrollY === 0 || (scrollY >= aboutSectionTop && scrollY < experienceSectionTop);
             const isExperienceVisible = scrollY >= experienceSectionTop && scrollY < projectsSectionTop;
             const isProjectsVisible = scrollY >= projectsSectionTop;
@@ -162,12 +163,13 @@ class IndexPageComponent extends HTMLElement {
                 link.classList.remove('text-teal-400', 'font-semibold');
                 link.classList.add('text-gray-300', 'font-normal');
             });
+    
             if (isAboutVisible) {
-                // const aboutLink = document.querySelector('nav a[href="#about"]');
-                // if (aboutLink) {
-                //     aboutLink.classList.add('text-teal-400', 'font-semibold');
-                //     aboutLink.classList.remove('text-gray-300', 'font-normal');
-                // }
+                const aboutLink = document.querySelector('nav a[href="#about"]');
+                if (aboutLink) {
+                    aboutLink.classList.add('text-teal-400', 'font-semibold');
+                    aboutLink.classList.remove('text-gray-300', 'font-normal');
+                }
             } else if (isExperienceVisible) {
                 const experienceLink = document.querySelector('nav a[href="#experience"]');
                 if (experienceLink) {
@@ -182,6 +184,9 @@ class IndexPageComponent extends HTMLElement {
                 }
             }
         });
+    
+        // Ensure "About" is active on page load
+        window.dispatchEvent(new Event('scroll'));
     }
 
 }
