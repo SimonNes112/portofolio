@@ -24,7 +24,7 @@ class IndexPageComponent extends HTMLElement {
             <main class="w-full md:w-[55%] flex flex-col gap-24 px-6 pt-20">
               <!-- About -->
               <about-component></about-component>
-    
+              
               <!-- Experience -->
               <experience-component></experience-component>
     
@@ -38,19 +38,17 @@ class IndexPageComponent extends HTMLElement {
     }
 
     private backGroundAnimation(): void {
-      // get user cursor position
       document.addEventListener('mousemove', (event) => {
-          const x = event.clientX + window.scrollX; // Add horizontal scroll offset
-          const y = event.clientY + window.scrollY; // Add vertical scroll offset
+          const x = event.clientX + window.scrollX;
+          const y = event.clientY + window.scrollY;
           const cursor = `${x}px ${y}px`;
           const background: HTMLElement | null = document.getElementById('app');
   
-          // make animation effect that sits on top of the background
           if (background) {
               background.style.backgroundImage = `radial-gradient(circle at ${cursor}, rgba(255, 255, 255, 0.2) 1%, transparent 40%)`;
           }
       });
-  }
+    }
 }
   
   customElements.define('index-page', IndexPageComponent);
