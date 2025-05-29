@@ -34,7 +34,7 @@ class IndexPageComponent extends HTMLElement {
 
               <!-- Credits -->
               <div class="text-center text-sm text-gray-500 mt-12">
-                <p>designed in Figma and coded in Visual Studio Code by Simon Nes.</p>
+                <p>Designed in Figma and coded in Visual Studio Code by Simon Nes.</p>
                 <p>Built with <a href="https://nextjs.org/" class="text-blue-500 hover:underline">Next.js</a> and <a href="https://tailwindcss.com/" class="text-blue-500 hover:underline">Tailwind CSS</a>, deployed with <a href="https://vercel.com/" class="text-blue-500 hover:underline">Vercel</a>.</p>
               </div>
             </main>
