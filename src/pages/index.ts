@@ -11,7 +11,7 @@ class IndexPageComponent extends HTMLElement {
             <div>
               <h1 class="text-5xl font-bold">Simon Nes</h1>
               <h2 class="text-xl font-semibold mt-2 text-gray-100">Aspiring Full Stack Engineer</h2>
-              <p class="text-base text-gray-400 mt-4">I build end-to-end applications.</p>
+              <p class="text-base text-gray-400 mt-4">I create full-stack solutions.</p>
   
               <nav class="space-y-4 mt-10 text-gray-300 text-sm">
                 <div class="flex items-center gap-4">
@@ -98,7 +98,19 @@ class IndexPageComponent extends HTMLElement {
       `;
       console.log('IndexPageComponent initialized');
     }
-  }
+
+    private animatesidebar(): void {
+        const sidebar = this.querySelector('aside');
+        if (sidebar) {
+            sidebar.classList.add('animate-slide-in');
+        }
+        }
+    constructor() {
+        super();
+        this.animatesidebar();
+        }
+
+}
   
   customElements.define('index-page', IndexPageComponent);
   
