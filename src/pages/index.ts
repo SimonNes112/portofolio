@@ -22,7 +22,7 @@ class IndexPageComponent extends HTMLElement {
             </aside>
     
             <!-- Content rechts -->
-            <main class="w-full md:w-[55%] flex flex-col gap-24 px-6 pt-20">
+            <main class="w-full md:w-[55%] flex flex-col gap-24 px-6 pt-20 mb-6">
               <!-- About -->
               <about-component></about-component>
 
@@ -31,6 +31,12 @@ class IndexPageComponent extends HTMLElement {
     
               <!-- Projects -->
               <projects-component></projects-component>
+
+              <!-- Credits -->
+              <div class="text-center text-sm text-gray-500 mt-12">
+                <p>designed in Figma and coded in Visual Studio Code by Simon Nes.</p>
+                <p>Built with <a href="https://nextjs.org/" class="text-blue-500 hover:underline">Next.js</a> and <a href="https://tailwindcss.com/" class="text-blue-500 hover:underline">Tailwind CSS</a>, deployed with <a href="https://vercel.com/" class="text-blue-500 hover:underline">Vercel</a>.</p>
+              </div>
             </main>
           </section>
       `;
