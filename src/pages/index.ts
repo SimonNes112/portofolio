@@ -40,19 +40,17 @@ class IndexPageComponent extends HTMLElement {
     private backGroundAnimation(): void {
       // get user cursor position
       document.addEventListener('mousemove', (event) => {
-        const x = event.clientX;
-        const y = event.clientY;
-        const cursor = `${x}px ${y}px`;
-        const background: HTMLElement | null = document.getElementById('app');
-
-        
-        // make animation effect that sits on top of the background
-        if (background) {
-          background.style.backgroundImage = `radial-gradient(circle at ${cursor}, rgba(255, 255, 255, 0.2) 1%, transparent 40%)`;
-        }
-
+          const x = event.clientX + window.scrollX; // Add horizontal scroll offset
+          const y = event.clientY + window.scrollY; // Add vertical scroll offset
+          const cursor = `${x}px ${y}px`;
+          const background: HTMLElement | null = document.getElementById('app');
+  
+          // make animation effect that sits on top of the background
+          if (background) {
+              background.style.backgroundImage = `radial-gradient(circle at ${cursor}, rgba(255, 255, 255, 0.2) 1%, transparent 40%)`;
+          }
       });
-    }
+  }
 }
   
   customElements.define('index-page', IndexPageComponent);
