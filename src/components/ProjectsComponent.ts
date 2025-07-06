@@ -8,10 +8,10 @@ class ProjectsComponent extends HTMLElement {
             <h2 class="text-2md font-bold text-gray-100 p-6">Projects</h2>
             <section id="projects" class="space-y-10">
                 <div class="space-y-4">
-                    <a href="#" class="block p-6 hover:bg-[#202334] rounded-xl transition">
+                    <a href="https://staldelagenes.nl" class="block p-6 hover:bg-[#202334] rounded-xl transition">
                     <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
                         <!-- Image -->
-                        <img src="/images/StalDeLageNes.png" alt="Portfolio Preview" class="w-full sm:w-56 rounded-lg object-cover">
+                        <img src="/images/StalDeLageNes1.png" alt="Portfolio Preview" class="w-full sm:w-56 rounded-lg object-cover">
 
                         <!-- Content -->
                         <div class="flex-1">
